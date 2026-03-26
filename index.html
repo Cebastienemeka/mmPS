@@ -18,8 +18,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style2.css">
 
-  <link rel="stylesheet" href="./css/style2.css" />
 </head>
 
 <body>
@@ -28,8 +28,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="assets/images/mm-logo.png" width="100%" alt="MM Pilates Logo" class="nav-logo" />
-        <!-- <span class="brand-text">MM Pilates</span> -->
+        <img src="assets/images/mm-logo.png" alt="MM Pilates Logo" class="nav-logo" />
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -42,6 +41,7 @@
           <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
           <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -53,7 +53,7 @@
     </div>
   </nav>
 
-  <!-- HERO - KEEP -->
+  <!-- HERO -->
   <section class="hero hero-video-bg" id="home">
     <video class="hero-bg-video" autoplay muted loop playsinline>
       <source src="assets/videos/heross-banner.mp4" type="video/mp4" />
@@ -81,6 +81,7 @@
     </div>
   </section>
 
+  <!-- QUICK GRID -->
   <section class="section-pad section-soft quick-grid-wrap" id="about">
     <div class="container">
       <div class="quick-grid">
@@ -135,8 +136,7 @@
 
         <div class="col-lg-6" data-reveal>
           <div class="image-stack">
-            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200" alt="Pilates studio class"
-              class="feature-media" />
+            <img src="./assets/images/allana.jpg" alt="Pilates studio class" class="feature-media" />
           </div>
         </div>
       </div>
@@ -150,8 +150,7 @@
         <span class="eyebrow">OUR CLASSES</span>
         <h2 class="section-title">Choose the class that meets you where you are.</h2>
         <p class="copy-muted section-intro">
-          A refined studio experience inspired by the flow of the Wix layout, but built with your content and color
-          direction.
+          A refined Pilates studio where intentional movement flows, built to strengthen your core and calm your mind.
         </p>
       </div>
 
@@ -215,13 +214,158 @@
     </div>
   </section>
 
+  <!-- PRICING SECTION - NEW -->
+  <section class="section-pad section-soft" id="pricing">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">INVEST IN YOURSELF</span>
+        <h2 class="section-title">Simple, transparent pricing.</h2>
+        <p class="copy-muted section-intro">
+          Choose the option that fits your lifestyle. No hidden fees, no long-term contracts.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Single Drop-in -->
+        <div class="col-md-6 col-lg-3" data-reveal>
+          <div class="pricing-card">
+            <div class="pricing-icon">
+              <i class="fas fa-calendar-day"></i>
+            </div>
+            <h3 class="pricing-title">Drop-in Class</h3>
+            <div class="pricing-price">₦12,000 <span>/ class</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Single 60-min class</li>
+              <li><i class="fas fa-check"></i> Access to any class type</li>
+              <li><i class="fas fa-check"></i> Perfect for trying us out</li>
+              <li><i class="fas fa-check"></i> Valid for 30 days</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Book Now</a>
+          </div>
+        </div>
+
+        <!-- 5 Class Pack -->
+        <div class="col-md-6 col-lg-3" data-reveal>
+          <div class="pricing-card">
+            <div class="pricing-icon">
+              <i class="fas fa-ticket-alt"></i>
+            </div>
+            <h3 class="pricing-title">5 Class Pack</h3>
+            <div class="pricing-price">₦55,000 <span>/ 5 classes</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> 5 x 60-min classes</li>
+              <li><i class="fas fa-check"></i> Save ₦5,000 vs drop-in</li>
+              <li><i class="fas fa-check"></i> Valid for 3 months</li>
+              <li><i class="fas fa-check"></i> Shareable with friends</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Book Now</a>
+          </div>
+        </div>
+
+        <!-- 10 Class Pack - Featured -->
+        <div class="col-md-6 col-lg-3" data-reveal>
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <div class="pricing-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="pricing-title">10 Class Pack</h3>
+            <div class="pricing-price">₦100,000 <span>/ 10 classes</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> 10 x 60-min classes</li>
+              <li><i class="fas fa-check"></i> Save ₦20,000 vs drop-in</li>
+              <li><i class="fas fa-check"></i> Valid for 6 months</li>
+              <li><i class="fas fa-check"></i> Priority booking</li>
+              <li><i class="fas fa-check"></i> Free mat rental</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Monthly Unlimited -->
+        <div class="col-md-6 col-lg-3" data-reveal>
+          <div class="pricing-card">
+            <div class="pricing-icon">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <h3 class="pricing-title">Monthly Unlimited</h3>
+            <div class="pricing-price">₦180,000 <span>/ month</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Unlimited classes</li>
+              <li><i class="fas fa-check"></i> Best value for regulars</li>
+              <li><i class="fas fa-check"></i> Priority class booking</li>
+              <li><i class="fas fa-check"></i> Free mat & towel</li>
+              <li><i class="fas fa-check"></i> 10% off workshops</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Private Sessions Pricing -->
+      <div class="row mt-5 pt-4">
+        <div class="col-12" data-reveal>
+          <div class="text-center mb-4">
+            <span class="eyebrow">PERSONALIZED ATTENTION</span>
+            <h3 class="section-title" style="font-size: 2rem;">Private & Duet Sessions</h3>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-reveal>
+          <div class="pricing-card" style="text-align: left;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="pricing-icon" style="margin-bottom: 0;">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3 class="pricing-title mb-0">Private Session</h3>
+            </div>
+            <div class="pricing-price" style="font-size: 2rem;">₦35,000 <span>/ session</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> One-on-one personalized instruction</li>
+              <li><i class="fas fa-check"></i> Tailored to your specific goals</li>
+              <li><i class="fas fa-check"></i> Flexible scheduling</li>
+              <li><i class="fas fa-check"></i> Perfect for beginners or rehabilitation</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Book Private</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6" data-reveal>
+          <div class="pricing-card" style="text-align: left;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="pricing-icon" style="margin-bottom: 0;">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h3 class="pricing-title mb-0">Duet Session</h3>
+            </div>
+            <div class="pricing-price" style="font-size: 2rem;">₦50,000 <span>/ session</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Semi-private with a friend</li>
+              <li><i class="fas fa-check"></i> Personalized attention for two</li>
+              <li><i class="fas fa-check"></i> Great for partners or friends</li>
+              <li><i class="fas fa-check"></i> Shared experience, shared cost</li>
+            </ul>
+            <a href="#schedule" class="btn-muse btn-pricing">Book Duet</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Note -->
+      <div class="text-center mt-4" data-reveal>
+        <p class="copy-muted" style="font-size: 0.85rem;">
+          <i class="fas fa-info-circle me-1"></i> All classes include complimentary mat rental. 
+          First-time clients receive 20% off their first class pack.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- EDITORIAL STORY BLOCK -->
-  <section class="section-pad section-soft">
+  <section class="section-pad">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-5" data-reveal>
-          <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1000" alt="Pilates lifestyle"
-            class="founder-image" />
+          <img src="./assets/images/studio-hurstville.jpg" alt="Pilates lifestyle" class="founder-image" />
         </div>
 
         <div class="col-lg-7" data-reveal>
@@ -264,33 +408,10 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="stats-band mt-5" data-reveal>
-        <div class="row g-4 text-center text-lg-start">
-          <div class="col-md-4">
-            <div class="stat-item">
-              <strong>4</strong>
-              <span>Signature class styles</span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="stat-item">
-              <strong>12</strong>
-              <span>Max clients per class</span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="stat-item">
-              <strong>100%</strong>
-              <span>Welcoming environment</span>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 
-  <!-- TIMETABLE - KEEP -->
+  <!-- TIMETABLE -->
   <section class="booking-section section-pad" id="schedule">
     <div class="container">
       <div class="row align-items-center g-5">
@@ -386,7 +507,7 @@
             <div class="content">
               <span class="tag mb-3"><i class="fas fa-quote-left"></i> Testimonial</span>
               <p class="lead-text mb-3">
-                “I feel stronger, calmer, and more connected every time I leave class.”
+                "I feel stronger, calmer, and more connected every time I leave class."
               </p>
               <strong>Sarah M.</strong>
             </div>
@@ -398,19 +519,19 @@
             <div class="content">
               <span class="tag mb-3"><i class="fas fa-quote-left"></i> Testimonial</span>
               <p class="lead-text mb-3">
-                “The space is so welcoming. It never feels intimidating, only supportive.”
+                "The space is so welcoming. It never feels intimidating, only supportive."
               </p>
               <strong>Michael T.</strong>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4" data-reveal>
+        <div class="col-md-4" data-reveal">
           <div class="testimonial-card">
             <div class="content">
               <span class="tag mb-3"><i class="fas fa-quote-left"></i> Testimonial</span>
               <p class="lead-text mb-3">
-                “This has helped my posture, my back, and even the way I handle stress.”
+                "This has helped my posture, my back, and even the way I handle stress."
               </p>
               <strong>Jennifer K.</strong>
             </div>
@@ -457,6 +578,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#classes">Classes</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#schedule">Schedule</a></li>
           </ul>
         </div>
@@ -534,6 +656,7 @@
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (event) {
           const href = this.getAttribute('href');
+          if (href === '#') return;
           const target = document.querySelector(href);
           if (target) {
             event.preventDefault();

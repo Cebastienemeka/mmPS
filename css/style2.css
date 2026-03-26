@@ -1,3 +1,10 @@
+/* ========================================
+   MM PILATES STUDIO - MASTER STYLESHEET
+   ======================================== */
+
+/* ------------------------------
+   CSS VARIABLES / ROOT
+------------------------------ */
 :root {
   --muse-cream: #2f3237;
   --muse-soft: #383c42;
@@ -15,6 +22,9 @@
   --transition: all 0.35s ease;
 }
 
+/* ------------------------------
+   BASE STYLES
+------------------------------ */
 html {
   scroll-behavior: smooth;
 }
@@ -43,6 +53,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   color: inherit;
 }
 
+/* ------------------------------
+   SECTION LAYOUT
+------------------------------ */
 .section-pad {
   padding: 6rem 0;
 }
@@ -84,6 +97,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   font-size: 1.06rem;
 }
 
+/* ------------------------------
+   BUTTONS
+------------------------------ */
 .btn-muse,
 .btn-muse-outline,
 .btn-square {
@@ -126,11 +142,37 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   border-color: var(--muse-accent);
 }
 
+.btn-square {
+  border-radius: 4px;
+  background: #1d2024;
+  color: var(--muse-white);
+  padding: 1.15rem 2rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-square:hover {
+  color: var(--muse-white);
+  background: #25292e;
+  transform: translateY(-2px);
+}
+
+.btn-pricing {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 85px;
   z-index: 1200;
   background: transparent;
   border-bottom: 1px solid transparent;
@@ -156,6 +198,12 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   width: 100px;
   height: 48px;
   object-fit: contain;
+  transition: var(--transition);
+}
+
+.navbar.scrolled .nav-logo {
+  width: 90px;
+  height: 42px;
 }
 
 .brand-text {
@@ -211,6 +259,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   transform: scaleX(1);
 }
 
+/* ------------------------------
+   HERO SECTION (VIDEO BACKGROUND)
+------------------------------ */
 .hero.hero-video-bg {
   position: relative;
   min-height: 100vh;
@@ -266,6 +317,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   color: #ffffff;
 }
 
+/* ------------------------------
+   QUICK GRID SECTION
+------------------------------ */
 .quick-grid-wrap {
   position: relative;
 }
@@ -284,6 +338,11 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   padding: 1.6rem;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
   height: 100%;
+  transition: var(--transition);
+}
+
+.quick-card:hover {
+  transform: translateY(-5px);
 }
 
 .quick-card .icon {
@@ -304,6 +363,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   color: var(--muse-ink);
 }
 
+/* ------------------------------
+   STUDIO SPLIT SECTION
+------------------------------ */
 .studio-split {
   padding-top: 1rem;
 }
@@ -329,6 +391,100 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   min-height: 560px;
 }
 
+/* ------------------------------
+   PRICING CARDS
+------------------------------ */
+.pricing-card {
+  background: var(--muse-card);
+  border-radius: 24px;
+  border: 1px solid var(--muse-border);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--muse-accent);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--muse-accent);
+  transform: scale(1.02);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.02) translateY(-8px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--muse-accent);
+  color: #141518;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-icon {
+  font-size: 2.5rem;
+  color: var(--muse-accent);
+  margin-bottom: 1rem;
+}
+
+.pricing-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--muse-accent);
+  margin: 1rem 0;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muse-copy);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.pricing-features li {
+  padding: 0.5rem 0;
+  color: var(--muse-copy);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--muse-border);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features i {
+  color: var(--muse-accent);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* ------------------------------
+   BOOKING / TIMETABLE SECTION
+------------------------------ */
 .booking-section {
   background: #2f3237;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -424,6 +580,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   color: var(--muse-accent);
 }
 
+/* ------------------------------
+   CARDS / PANELS
+------------------------------ */
 .panel,
 .studio-card,
 .feature-card,
@@ -475,6 +634,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   font-weight: 600;
 }
 
+/* ------------------------------
+   STATS / QUOTES
+------------------------------ */
 .stats-band {
   background: linear-gradient(135deg, #1f2227, #141619);
   color: var(--muse-white);
@@ -512,6 +674,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   color: var(--muse-ink);
 }
 
+/* ------------------------------
+   ICON BLOCKS
+------------------------------ */
 .story-card .icon,
 .contact-card .icon {
   width: 54px;
@@ -525,6 +690,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   margin-bottom: 1rem;
 }
 
+/* ------------------------------
+   CTA BAND
+------------------------------ */
 .cta-band {
   background: linear-gradient(135deg, rgba(192, 162, 125, 0.12), #35393f);
   border: 1px solid rgba(192, 162, 125, 0.16);
@@ -532,6 +700,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   padding: 2.5rem;
 }
 
+/* ------------------------------
+   FOOTER
+------------------------------ */
 .footer {
   background: #16181b;
   color: rgba(255, 255, 255, 0.82);
@@ -587,6 +758,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   background: rgba(255, 255, 255, 0.14);
 }
 
+/* ------------------------------
+   BACK TO TOP BUTTON
+------------------------------ */
 .back-to-top {
   position: fixed;
   right: 1.25rem;
@@ -603,6 +777,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   transform: translateY(12px);
   transition: var(--transition);
   z-index: 1080;
+  cursor: pointer;
 }
 
 .back-to-top.show {
@@ -611,6 +786,14 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   transform: translateY(0);
 }
 
+.back-to-top:hover {
+  background: var(--muse-accent-deep);
+  transform: translateY(-3px);
+}
+
+/* ------------------------------
+   REVEAL ANIMATION
+------------------------------ */
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
@@ -622,6 +805,9 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   transform: translateY(0);
 }
 
+/* ------------------------------
+   RESPONSIVE BREAKPOINTS
+------------------------------ */
 @media (max-width: 1199.98px) {
   .booking-row {
     grid-template-columns: 105px 1fr auto;
@@ -649,6 +835,11 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
     padding-bottom: 40px;
   }
 
+  .hero-copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .hero-copy h1 {
     font-size: clamp(2.6rem, 8vw, 4.4rem);
   }
@@ -670,21 +861,32 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   .booking-row {
     grid-template-columns: 1fr;
     gap: 0.55rem;
+    text-align: center;
   }
 
   .booking-pill {
     justify-self: start;
+    display: inline-block;
+    width: auto;
   }
 
   .feature-media,
   .founder-image {
     min-height: 420px;
   }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
 }
 
 @media (max-width: 767.98px) {
   .nav-logo {
-    width: 40px;
+    width: 80px;
     height: 40px;
   }
 
@@ -744,8 +946,15 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   .quick-grid {
     margin-top: -2.5rem;
   }
+
+  .pricing-price {
+    font-size: 2rem;
+  }
 }
 
+/* ------------------------------
+   ACCESSIBILITY / REDUCED MOTION
+------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
