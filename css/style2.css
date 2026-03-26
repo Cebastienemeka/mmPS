@@ -965,3 +965,11 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
     scroll-behavior: auto !important;
   }
 }
+
+
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+}
