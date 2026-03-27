@@ -259,6 +259,63 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
   transform: scaleX(1);
 }
 
+/* Dropdown Styles */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* Underline effect for dropdown toggle - matches nav-link style */
+.navbar .nav-link.dropdown-toggle {
+  position: relative;
+}
+
+.navbar .nav-link.dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #c0a27d;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 0.35s ease;
+}
+
+.navbar .nav-link.dropdown-toggle:hover::after,
+.navbar .nav-link.dropdown-toggle.show::after {
+  transform: scaleX(1);
+}
+
+/* Style dropdown items to match the dark theme */
+.dropdown-menu-dark {
+  background: #383c42;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: #f5f7fa;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.35s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background: rgba(192, 162, 125, 0.14);
+  border-bottom: 2px solid #c0a27d;
+}
+
+/* Keep the original arrow but ensure it doesn't interfere with underline */
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 /* ------------------------------
    HERO SECTION (VIDEO BACKGROUND)
 ------------------------------ */
@@ -964,12 +1021,4 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, label {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-
-@media (min-width: 992px) {
-    .dropdown:hover .dropdown-menu {
-      display: block;
-      margin-top: 0;
-    }
 }

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Pilates | Membership Plans</title>
+    <meta name="description"
+        content="MM Pilates Studio membership plans - Monthly unlimited membership with exclusive benefits, priority booking, and special discounts.">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Membership Page CSS -->
+    <link rel="stylesheet" href="css/membership.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/mm-logo.png" alt="MM Pilates Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#classes">Classes</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Pricing
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="packages.html">Packages</a></li>
+                            <li><a class="dropdown-item active" href="membership.html">Membership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn-muse" href="index.html#schedule">Book a Class</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="membership-hero">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <span class="eyebrow">COMMIT TO YOUR PRACTICE</span>
+                    <h1 class="hero-title">Membership Plans</h1>
+                    <p class="hero-description">
+                        Unlimited classes, exclusive benefits, and priority access. Perfect for dedicated practitioners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Toggle -->
+    <section class="membership-toggle-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="toggle-wrapper">
+                        <span class="toggle-option monthly active">Monthly</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="membershipToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-option yearly">
+                            Yearly <span class="save-badge">Save 20%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Cards -->
+    <section class="membership-section">
+        <div class="container">
+            <div class="membership-grid">
+                <!-- Monthly Unlimited -->
+                <div class="membership-card featured" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-badge">BEST VALUE</div>
+                    <div class="card-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 class="card-title">Monthly Unlimited</h3>
+                    <p class="card-description">For dedicated practitioners who love to move daily</p>
+                    <div class="price-container">
+                        <span class="currency">₦</span>
+                        <span class="price monthly-price">180,000</span>
+                        <span class="price yearly-price">144,000</span>
+                        <span class="period">/ month</span>
+                    </div>
+                    <div class="savings-badge yearly-savings">Save ₦36,000/year</div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Unlimited classes</li>
+                        <li><i class="fas fa-check-circle"></i> Best value for regulars</li>
+                        <li><i class="fas fa-check-circle"></i> 72-hour priority class booking</li>
+                        <li><i class="fas fa-check-circle"></i> Free mat & towel rental</li>
+                        <li><i class="fas fa-check-circle"></i> 10% off workshops & events</li>
+                        <li><i class="fas fa-check-circle"></i> 1 complimentary guest pass/month</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible freeze option (up to 30 days)</li>
+                    </ul>
+                    <a href="index.html#schedule" class="btn-membership featured-btn">Join Now</a>
+
+                    <!-- Terms & Conditions -->
+                    <div class="terms-toggle">
+                        <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                                class="fas fa-chevron-down"></i></span>
+                        <div class="terms-content">
+                            <h4>Monthly Membership Terms & Conditions</h4>
+                            <ul>
+                                <li><strong>Billing:</strong> Monthly recurring charge of ₦180,000. First month billed
+                                    at signup.</li>
+                                <li><strong>Cancellation:</strong> 30-day written notice required to cancel membership.
+                                </li>
+                                <li><strong>Freeze Policy:</strong> Members may freeze membership once per year for up
+                                    to 30 days with 7-day notice.</li>
+                                <li><strong>Class Booking:</strong> Members get 72-hour priority booking window.</li>
+                                <li><strong>Cancellation Policy:</strong> 12-hour cancellation policy applies. Late
+                                    cancellations count toward monthly limit.</li>
+                                <li><strong>No-Show Policy:</strong> 3 no-shows per month may result in temporary
+                                    booking restrictions.</li>
+                                <li><strong>Guest Pass:</strong> One complimentary guest pass per month (subject to
+                                    availability).</li>
+                                <li><strong>Rate Lock:</strong> Membership rate is locked for the duration of active
+                                    membership.</li>
+                                <li><strong>Reinstatement:</strong> Cancelled memberships subject to current rates upon
+                                    rejoining.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-Month Commitment -->
+                <div class="membership-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-badge"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="card-title">3-Month Commitment</h3>
+                    <p class="card-description">Commit to your practice with savings</p>
+                    <div class="price-container">
+                        <span class="currency">₦</span>
+                        <span class="price monthly-price">165,000</span>
+                        <span class="price yearly-price">132,000</span>
+                        <span class="period">/ month</span>
+                    </div>
+                    <div class="savings-badge">Save ₦15,000/quarter</div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Unlimited classes</li>
+                        <li><i class="fas fa-check-circle"></i> 48-hour priority booking</li>
+                        <li><i class="fas fa-check-circle"></i> Free mat & towel rental</li>
+                        <li><i class="fas fa-check-circle"></i> 5% off workshops</li>
+                        <li><i class="fas fa-check-circle"></i> 1 guest pass per quarter</li>
+                        <li><i class="fas fa-check-circle"></i> 3-month commitment required</li>
+                    </ul>
+                    <a href="index.html#schedule" class="btn-membership">Commit Now</a>
+
+                    <!-- Terms & Conditions -->
+                    <div class="terms-toggle">
+                        <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                                class="fas fa-chevron-down"></i></span>
+                        <div class="terms-content">
+                            <h4>3-Month Commitment Terms & Conditions</h4>
+                            <ul>
+                                <li><strong>Commitment Period:</strong> Minimum 3-month commitment required.</li>
+                                <li><strong>Billing:</strong> Billed monthly at ₦165,000 for 3 months.</li>
+                                <li><strong>Early Termination:</strong> Early termination fee of ₦50,000 applies.</li>
+                                <li><strong>Class Booking:</strong> 48-hour priority booking window.</li>
+                                <li><strong>Cancellation Policy:</strong> 12-hour cancellation policy applies.</li>
+                                <li><strong>Freeze Policy:</strong> One 14-day freeze allowed during commitment period.
+                                </li>
+                                <li><strong>Renewal:</strong> Automatically converts to monthly after 3 months unless
+                                    cancelled.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="eyebrow">EXCLUSIVE PERKS</span>
+                <h2 class="section-title">Membership Benefits</h2>
+                <p class="section-subtitle">More than just unlimited classes</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Priority Booking</h4>
+                    <p>Book classes 72 hours in advance — before anyone else</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>Guest Passes</h4>
+                    <p>Bring a friend free once a month to share the experience</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h4>Workshop Discounts</h4>
+                    <p>10% off all specialty workshops and events</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-snowplow"></i>
+                    </div>
+                    <h4>Membership Freeze</h4>
+                    <p>Freeze your membership for up to 30 days (once per year)</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-towel"></i>
+                    </div>
+                    <h4>Free Amenities</h4>
+                    <p>Complimentary mat, towel, and locker usage</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h4>Merchandise Discount</h4>
+                    <p>15% off all MM Pilates apparel and accessories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="eyebrow">COMPARE PLANS</span>
+                <h2 class="section-title">Membership vs Packages</h2>
+            </div>
+
+            <div class="table-wrapper" data-aos="fade-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Monthly Unlimited</th>
+                            <th>3-Month Commitment</th>
+                            <th>10-Class Pack</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Classes Per Month</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td>10 total</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Price</td>
+                            <td>₦180,000</td>
+                            <td>₦165,000</td>
+                            <td>₦100,000 (one-time)</td>
+                        </tr>
+                        <tr>
+                            <td>Price Per Class (30 classes)</td>
+                            <td>₦6,000</td>
+                            <td>₦5,500</td>
+                            <td>₦10,000</td>
+                        </tr>
+                        <tr>
+                            <td>Priority Booking</td>
+                            <td><i class="fas fa-check"></i> 72 hours</td>
+                            <td><i class="fas fa-check"></i> 48 hours</td>
+                            <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Guest Passes</td>
+                            <td><i class="fas fa-check"></i> 1/month</td>
+                            <td><i class="fas fa-check"></i> 1/quarter</td>
+                            <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Workshop Discount</td>
+                            <td><i class="fas fa-check"></i> 10%</td>
+                            <td><i class="fas fa-check"></i> 5%</td>
+                            <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Freeze Option</td>
+                            <td><i class="fas fa-check"></i> Yes (30 days)</td>
+                            <td><i class="fas fa-check"></i> Limited (14 days)</td>
+                            <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Commitment Required</td>
+                            <td>Month-to-month</td>
+                            <td>3 months</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="eyebrow">MEMBERSHIP FAQs</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4>How do I cancel my membership?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To cancel your membership, please provide 30 days written notice via email to
+                            hello@mmpilates.com. Your membership will remain active for the remainder of the billing
+                            cycle. No refunds for partial months.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h4>Can I freeze my membership?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Monthly members can freeze once per year for up to 30 days with 7 days notice. Freeze
+                            periods can be extended for medical reasons with doctor's note. No freeze fees apply.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h4>What happens if I miss a class?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We require 12-hour cancellation notice. Late cancellations count as a used class. Three
+                            no-shows within a 30-day period may result in temporary booking restrictions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h4>Can I bring a guest to class?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Monthly members receive one complimentary guest pass per month. Additional guests can be
+                            added for the drop-in rate of ₦12,000. Guests must sign a waiver before class.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h4>What's included in my membership?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your membership includes unlimited classes, priority booking, free mat and towel rental, 10%
+                            off workshops, one monthly guest pass, and 15% off MM Pilates merchandise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h4>Can I switch between monthly and yearly plans?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade from monthly to yearly at any time. The yearly plan offers 20% savings
+                            and additional benefits. Downgrades require 30-day notice and take effect at next billing
+                            cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Terms & Conditions Section -->
+  <section class="terms-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">LEGAL</span>
+        <h2 class="section-title">Membership Terms & Conditions</h2>
+        <p class="section-subtitle">Please read our membership terms carefully before joining</p>
+      </div>
+
+      <div class="terms-grid" data-aos="fade-up">
+        <!-- Monthly Unlimited Terms -->
+        <div class="terms-card featured-terms">
+          <div class="terms-card-header">
+            <i class="fas fa-infinity"></i>
+            <h3>Monthly Unlimited Membership</h3>
+            <span class="terms-badge">BEST VALUE</span>
+          </div>
+          <div class="terms-card-content">
+            <div class="terms-group">
+              <h4>Billing & Payment</h4>
+              <ul>
+                <li>Monthly recurring charge of <strong>₦180,000</strong> billed on the same date each month</li>
+                <li>First month billed at signup, subsequent months on the same day of the month</li>
+                <li>Payment methods accepted: Credit/Debit cards, Bank transfer, Direct debit</li>
+                <li>Failed payments result in <strong>3-day grace period</strong> before membership suspension</li>
+                <li>Late fees of ₦5,000 apply if payment not received within 7 days</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Cancellation Policy</h4>
+              <ul>
+                <li><strong>30-day written notice</strong> required to cancel membership</li>
+                <li>Cancellation requests must be sent to <strong>hello@mmpilates.com</strong></li>
+                <li>Membership remains active for the remainder of the current billing cycle</li>
+                <li><strong>No refunds</strong> for partial months after cancellation</li>
+                <li>Early termination (within first 3 months) incurs <strong>₦50,000 fee</strong></li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Freeze Policy</h4>
+              <ul>
+                <li>Members may freeze membership <strong>once per year</strong> for up to <strong>30 days</strong></li>
+                <li><strong>7-day written notice</strong> required before freeze period</li>
+                <li>No membership fees during freeze period</li>
+                <li>Freeze period extends membership end date by the same duration</li>
+                <li>Medical freezes up to <strong>90 days</strong> with doctor's note</li>
+                <li>Freeze requests must include reason and desired freeze dates</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Class Booking & Attendance</h4>
+              <ul>
+                <li><strong>72-hour priority booking</strong> window for members</li>
+                <li>Maximum <strong>2 bookings per day</strong>, maximum <strong>8 active bookings</strong> at any time</li>
+                <li><strong>12-hour cancellation policy</strong> applies to all bookings</li>
+                <li>Late cancellations count as <strong>1 no-show</strong> toward monthly limit</li>
+                <li><strong>3 no-shows per month</strong> result in temporary <strong>7-day booking restriction</strong></li>
+                <li>No-show definition: Cancellation within 12 hours OR failure to attend</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Guest Pass Policy</h4>
+              <ul>
+                <li><strong>One complimentary guest pass</strong> per month</li>
+                <li>Guest passes valid for the current month only (cannot be accumulated)</li>
+                <li>Guests must sign waiver before class</li>
+                <li>Additional guests can attend at <strong>drop-in rate of ₦12,000</strong></li>
+                <li>Same guest cannot use multiple passes in one month</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Rate Lock & Changes</h4>
+              <ul>
+                <li>Membership rate is <strong>locked for the duration of active membership</strong></li>
+                <li>Rate increases apply only to new members or rejoining members</li>
+                <li>30-day notice provided for any policy changes</li>
+                <li>Rejoining after cancellation subject to current rates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Month Commitment Terms -->
+        <div class="terms-card">
+          <div class="terms-card-header">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>3-Month Commitment</h3>
+          </div>
+          <div class="terms-card-content">
+            <div class="terms-group">
+              <h4>Billing & Commitment</h4>
+              <ul>
+                <li><strong>3-month minimum commitment</strong> required at signup</li>
+                <li>Billed monthly at <strong>₦165,000</strong> for 3 consecutive months</li>
+                <li>First month billed at signup, subsequent months on same date</li>
+                <li>Early termination before 3 months incurs <strong>₦50,000 fee</strong></li>
+                <li>After 3 months, converts to month-to-month at current rate</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Cancellation & Freeze</h4>
+              <ul>
+                <li>After commitment period, <strong>30-day notice</strong> required to cancel</li>
+                <li><strong>One 14-day freeze</strong> allowed during commitment period</li>
+                <li>Medical freezes up to 60 days with doctor's note</li>
+                <li>No refunds for early termination of commitment period</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Booking Benefits</h4>
+              <ul>
+                <li><strong>48-hour priority booking</strong> window</li>
+                <li>Maximum <strong>2 bookings per day</strong>, <strong>6 active bookings</strong> at any time</li>
+                <li><strong>12-hour cancellation policy</strong> applies</li>
+                <li>2 no-shows per month result in 5-day booking restriction</li>
+              </ul>
+            </div>
+            <div class="terms-group">
+              <h4>Guest Pass</h4>
+              <ul>
+                <li><strong>One guest pass per quarter</strong> (every 3 months)</li>
+                <li>Guest passes do not accumulate between quarters</li>
+                <li>Additional guests at drop-in rate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Terms for Members -->
+      <div class="general-terms" data-aos="fade-up">
+        <h3>General Membership Terms</h3>
+        <div class="general-terms-grid">
+          <div class="general-term-item">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div>
+              <h4>Membership Benefits</h4>
+              <p>Includes unlimited classes, priority booking, free mat & towel, 10% off workshops, 15% off merchandise, and one monthly guest pass.</p>
+            </div>
+          </div>
+          <div class="general-term-item">
+            <i class="fas fa-sync-alt"></i>
+            <div>
+              <h4>Upgrades & Downgrades</h4>
+              <p>Upgrade from 3-month to unlimited at any time by paying the difference. Downgrades require 30-day notice and take effect at next billing cycle.</p>
+            </div>
+          </div>
+          <div class="general-term-item">
+            <i class="fas fa-exchange-alt"></i>
+            <div>
+              <h4>Transferability</h4>
+              <p>Memberships are non-transferable to other individuals. Cannot be shared or split between multiple people.</p>
+            </div>
+          </div>
+          <div class="general-term-item">
+            <i class="fas fa-bell"></i>
+            <div>
+              <h4>Account Notifications</h4>
+              <p>All membership communications sent via email. Members responsible for keeping contact information current.</p>
+            </div>
+          </div>
+          <div class="general-term-item">
+            <i class="fas fa-file-signature"></i>
+            <div>
+              <h4>Waiver Requirement</h4>
+              <p>All members must sign a liability waiver before first class. Waivers remain valid for duration of membership.</p>
+            </div>
+          </div>
+          <div class="general-term-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Member Conduct</h4>
+              <p>Respectful conduct expected toward staff and members. Violations may result in membership termination without refund.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to commit to your practice?</h2>
+                <p>Join our membership community and enjoy unlimited movement, exclusive benefits, and priority access.
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#schedule" class="btn-cta-primary">Join Now</a>
+                    <a href="packages.html" class="btn-cta-secondary">Explore Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="assets/images/mm-logo.png" alt="MM Pilates Logo" class="footer-logo mb-3">
+                    <p class="copy-muted">
+                        Real Pilates for Real People. A calm, intentional studio designed to
+                        help you move better and feel better.
+                    </p>
+                    <div class="social-list mt-4">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-2">
+                    <p class="footer-title">Pages</p>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#classes">Classes</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <p class="footer-title">Studio</p>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li>Reformer Pilates</li>
+                        <li>Mat Pilates</li>
+                        <li>Stretch & Release</li>
+                        <li>Private Sessions</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <p class="footer-title">Contact</p>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><i class="fas fa-envelope me-2"></i> hello@mmpilates.com</li>
+                        <li><i class="fas fa-phone me-2"></i> (02) 8123 4567</li>
+                        <li><i class="fas fa-location-dot me-2"></i> Lekki, Lagos, Nigeria</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © <span id="currentYear"></span> MM Pilates Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Membership Toggle (Monthly/Yearly)
+        const membershipToggle = document.getElementById('membershipToggle');
+        const monthlyPrices = document.querySelectorAll('.monthly-price');
+        const yearlyPrices = document.querySelectorAll('.yearly-price');
+        const monthlyOption = document.querySelector('.toggle-option.monthly');
+        const yearlyOption = document.querySelector('.toggle-option.yearly');
+        const yearlySavings = document.querySelectorAll('.yearly-savings');
+
+        function updatePricingDisplay() {
+            const isYearly = membershipToggle.checked;
+
+            monthlyPrices.forEach(price => {
+                price.style.display = isYearly ? 'none' : 'inline-block';
+            });
+
+            yearlyPrices.forEach(price => {
+                price.style.display = isYearly ? 'inline-block' : 'none';
+            });
+
+            yearlySavings.forEach(savings => {
+                savings.style.display = isYearly ? 'inline-block' : 'none';
+            });
+
+            if (isYearly) {
+                monthlyOption.classList.remove('active');
+                yearlyOption.classList.add('active');
+            } else {
+                monthlyOption.classList.add('active');
+                yearlyOption.classList.remove('active');
+            }
+        }
+
+        if (membershipToggle) {
+            membershipToggle.addEventListener('change', updatePricingDisplay);
+            updatePricingDisplay();
+        }
+
+        // Toggle Terms & Conditions
+        function toggleTerms(element) {
+            const termsContainer = element.closest('.terms-toggle');
+            termsContainer.classList.toggle('open');
+        }
+        window.toggleTerms = toggleTerms;
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
