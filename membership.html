@@ -28,6 +28,272 @@
 
     <!-- Membership Page CSS -->
     <link rel="stylesheet" href="css/membership.css">
+
+    <style>
+        /* ------------------------------
+   CONDENSED TERMS & CONDITIONS
+------------------------------ */
+        .terms-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .terms-summary {
+            background: var(--muse-card);
+            border-radius: 24px;
+            border: 1px solid var(--muse-border);
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-summary h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: var(--muse-accent);
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .terms-grid.two-col {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .terms-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--muse-soft);
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .terms-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--muse-accent);
+            background: rgba(192, 162, 125, 0.05);
+        }
+
+        .terms-item.featured {
+            background: linear-gradient(135deg, var(--muse-soft), rgba(192, 162, 125, 0.08));
+            border-left: 3px solid var(--muse-accent);
+        }
+
+        .terms-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(192, 162, 125, 0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .terms-icon i {
+            font-size: 1.2rem;
+            color: var(--muse-accent);
+        }
+
+        .terms-content {
+            flex: 1;
+        }
+
+        .terms-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .terms-content p {
+            font-size: 0.8rem;
+            color: var(--muse-copy);
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .terms-content small {
+            font-size: 0.7rem;
+            color: var(--muse-accent);
+        }
+
+        .badge {
+            background: var(--muse-accent);
+            color: #141518;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Policies Grid */
+        .policies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .policies-grid.two-col-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .policy-item {
+            display: flex;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: var(--muse-soft);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .policy-item:hover {
+            background: rgba(192, 162, 125, 0.05);
+        }
+
+        .policy-item i {
+            font-size: 1rem;
+            color: var(--muse-accent);
+            margin-top: 0.2rem;
+            width: 24px;
+        }
+
+        .policy-item h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-family: "Inter", sans-serif;
+        }
+
+        .policy-item p {
+            font-size: 0.7rem;
+            color: var(--muse-copy);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Limits Grid */
+        .limits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .limit-item {
+            display: flex;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: var(--muse-soft);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .limit-item:hover {
+            background: rgba(192, 162, 125, 0.05);
+        }
+
+        .limit-item i {
+            font-size: 1rem;
+            color: var(--muse-accent);
+            margin-top: 0.2rem;
+            width: 24px;
+        }
+
+        .limit-item h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-family: "Inter", sans-serif;
+        }
+
+        .limit-item p {
+            font-size: 0.7rem;
+            color: var(--muse-copy);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Terms Note */
+        .terms-note {
+            background: rgba(192, 162, 125, 0.08);
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            justify-content: center;
+            border: 1px solid var(--muse-border);
+            margin-top: 1rem;
+        }
+
+        .terms-note i {
+            font-size: 1.2rem;
+            color: var(--muse-accent);
+        }
+
+        .terms-note p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muse-copy);
+        }
+
+        .terms-note strong {
+            color: var(--muse-accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .terms-grid,
+            .terms-grid.two-col,
+            .policies-grid,
+            .policies-grid.two-col-grid,
+            .limits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .terms-summary {
+                padding: 1.2rem;
+            }
+
+            .terms-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .terms-icon {
+                margin: 0 auto;
+            }
+
+            .policy-item,
+            .limit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .policy-item i,
+            .limit-item i {
+                margin: 0 auto 0.5rem;
+            }
+
+            .terms-note {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -422,185 +688,75 @@
         </div>
     </section>
 
-      <!-- Terms & Conditions Section -->
-  <section class="terms-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="eyebrow">LEGAL</span>
-        <h2 class="section-title">Membership Terms & Conditions</h2>
-        <p class="section-subtitle">Please read our membership terms carefully before joining</p>
-      </div>
+    <!-- Terms & Conditions Section -->
+    <section class="terms-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="eyebrow">LEGAL</span>
+                <h2 class="section-title">Membership Terms & Conditions</h2>
+                <p class="section-subtitle">Please read our membership terms carefully before joining</p>
+            </div>
+            <!-- General Terms -->
+            <div class="terms-summary">
+                <h3>General Terms</h3>
+                <div class="policies-grid two-col-grid">
+                    <div class="policy-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <div>
+                            <h4>Benefits</h4>
+                            <p>Unlimited classes · Priority booking · Free mat & towel · Workshop discounts ·
+                                Merchandise 15% off</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <div>
+                            <h4>Upgrades & Downgrades</h4>
+                            <p>Upgrade anytime by paying difference · Downgrades require 30-day notice</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-user-slash"></i>
+                        <div>
+                            <h4>Transferability</h4>
+                            <p>Memberships are non-transferable · Cannot be shared or split</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <h4>Account Notifications</h4>
+                            <p>All communications via email · Members responsible for current contact info</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-file-signature"></i>
+                        <div>
+                            <h4>Waiver Requirement</h4>
+                            <p>All members must sign liability waiver before first class</p>
+                        </div>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-gavel"></i>
+                        <div>
+                            <h4>Member Conduct</h4>
+                            <p>Respectful conduct expected · Violations may result in membership termination without
+                                refund</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="terms-grid" data-aos="fade-up">
-        <!-- Monthly Unlimited Terms -->
-        <div class="terms-card featured-terms">
-          <div class="terms-card-header">
-            <i class="fas fa-infinity"></i>
-            <h3>Monthly Unlimited Membership</h3>
-            <span class="terms-badge">BEST VALUE</span>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Billing & Payment</h4>
-              <ul>
-                <li>Monthly recurring charge of <strong>₦180,000</strong> billed on the same date each month</li>
-                <li>First month billed at signup, subsequent months on the same day of the month</li>
-                <li>Payment methods accepted: Credit/Debit cards, Bank transfer, Direct debit</li>
-                <li>Failed payments result in <strong>3-day grace period</strong> before membership suspension</li>
-                <li>Late fees of ₦5,000 apply if payment not received within 7 days</li>
-              </ul>
+            <!-- Quick Reference Note -->
+            <div class="terms-note">
+                <i class="fas fa-info-circle"></i>
+                <p>For questions about these terms, contact us at <strong>hello@mmpilates.com</strong> or call
+                    <strong>(02) 8123 4567</strong>
+                </p>
             </div>
-            <div class="terms-group">
-              <h4>Cancellation Policy</h4>
-              <ul>
-                <li><strong>30-day written notice</strong> required to cancel membership</li>
-                <li>Cancellation requests must be sent to <strong>hello@mmpilates.com</strong></li>
-                <li>Membership remains active for the remainder of the current billing cycle</li>
-                <li><strong>No refunds</strong> for partial months after cancellation</li>
-                <li>Early termination (within first 3 months) incurs <strong>₦50,000 fee</strong></li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Freeze Policy</h4>
-              <ul>
-                <li>Members may freeze membership <strong>once per year</strong> for up to <strong>30 days</strong></li>
-                <li><strong>7-day written notice</strong> required before freeze period</li>
-                <li>No membership fees during freeze period</li>
-                <li>Freeze period extends membership end date by the same duration</li>
-                <li>Medical freezes up to <strong>90 days</strong> with doctor's note</li>
-                <li>Freeze requests must include reason and desired freeze dates</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Class Booking & Attendance</h4>
-              <ul>
-                <li><strong>72-hour priority booking</strong> window for members</li>
-                <li>Maximum <strong>2 bookings per day</strong>, maximum <strong>8 active bookings</strong> at any time</li>
-                <li><strong>12-hour cancellation policy</strong> applies to all bookings</li>
-                <li>Late cancellations count as <strong>1 no-show</strong> toward monthly limit</li>
-                <li><strong>3 no-shows per month</strong> result in temporary <strong>7-day booking restriction</strong></li>
-                <li>No-show definition: Cancellation within 12 hours OR failure to attend</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Guest Pass Policy</h4>
-              <ul>
-                <li><strong>One complimentary guest pass</strong> per month</li>
-                <li>Guest passes valid for the current month only (cannot be accumulated)</li>
-                <li>Guests must sign waiver before class</li>
-                <li>Additional guests can attend at <strong>drop-in rate of ₦12,000</strong></li>
-                <li>Same guest cannot use multiple passes in one month</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Rate Lock & Changes</h4>
-              <ul>
-                <li>Membership rate is <strong>locked for the duration of active membership</strong></li>
-                <li>Rate increases apply only to new members or rejoining members</li>
-                <li>30-day notice provided for any policy changes</li>
-                <li>Rejoining after cancellation subject to current rates</li>
-              </ul>
-            </div>
-          </div>
         </div>
-
-        <!-- 3-Month Commitment Terms -->
-        <div class="terms-card">
-          <div class="terms-card-header">
-            <i class="fas fa-calendar-alt"></i>
-            <h3>3-Month Commitment</h3>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Billing & Commitment</h4>
-              <ul>
-                <li><strong>3-month minimum commitment</strong> required at signup</li>
-                <li>Billed monthly at <strong>₦165,000</strong> for 3 consecutive months</li>
-                <li>First month billed at signup, subsequent months on same date</li>
-                <li>Early termination before 3 months incurs <strong>₦50,000 fee</strong></li>
-                <li>After 3 months, converts to month-to-month at current rate</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Cancellation & Freeze</h4>
-              <ul>
-                <li>After commitment period, <strong>30-day notice</strong> required to cancel</li>
-                <li><strong>One 14-day freeze</strong> allowed during commitment period</li>
-                <li>Medical freezes up to 60 days with doctor's note</li>
-                <li>No refunds for early termination of commitment period</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Booking Benefits</h4>
-              <ul>
-                <li><strong>48-hour priority booking</strong> window</li>
-                <li>Maximum <strong>2 bookings per day</strong>, <strong>6 active bookings</strong> at any time</li>
-                <li><strong>12-hour cancellation policy</strong> applies</li>
-                <li>2 no-shows per month result in 5-day booking restriction</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Guest Pass</h4>
-              <ul>
-                <li><strong>One guest pass per quarter</strong> (every 3 months)</li>
-                <li>Guest passes do not accumulate between quarters</li>
-                <li>Additional guests at drop-in rate</li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <!-- General Terms for Members -->
-      <div class="general-terms" data-aos="fade-up">
-        <h3>General Membership Terms</h3>
-        <div class="general-terms-grid">
-          <div class="general-term-item">
-            <i class="fas fa-hand-holding-heart"></i>
-            <div>
-              <h4>Membership Benefits</h4>
-              <p>Includes unlimited classes, priority booking, free mat & towel, 10% off workshops, 15% off merchandise, and one monthly guest pass.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-sync-alt"></i>
-            <div>
-              <h4>Upgrades & Downgrades</h4>
-              <p>Upgrade from 3-month to unlimited at any time by paying the difference. Downgrades require 30-day notice and take effect at next billing cycle.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-exchange-alt"></i>
-            <div>
-              <h4>Transferability</h4>
-              <p>Memberships are non-transferable to other individuals. Cannot be shared or split between multiple people.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-bell"></i>
-            <div>
-              <h4>Account Notifications</h4>
-              <p>All membership communications sent via email. Members responsible for keeping contact information current.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-file-signature"></i>
-            <div>
-              <h4>Waiver Requirement</h4>
-              <p>All members must sign a liability waiver before first class. Waivers remain valid for duration of membership.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-clock"></i>
-            <div>
-              <h4>Member Conduct</h4>
-              <p>Respectful conduct expected toward staff and members. Violations may result in membership termination without refund.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
