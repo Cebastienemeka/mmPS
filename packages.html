@@ -1,30 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MM Pilates | Class Packages</title>
-  <meta name="description" content="MM Pilates Studio class packages - Choose from drop-ins, 5-class packs, and 10-class packs. Flexible options for your Pilates journey.">
-  
+  <meta name="description"
+    content="MM Pilates Studio class packages - Choose from drop-ins, 5-class packs, and 10-class packs. Flexible options for your Pilates journey.">
+
   <link rel="icon" type="image/png" href="assets/images/logo.png">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+
   <!-- Packages Page CSS -->
   <link rel="stylesheet" href="css/packages.css">
+
+  <style>
+    /* ------------------------------
+   CONDENSED TERMS & CONDITIONS
+------------------------------ */
+.terms-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.terms-summary {
+  background: var(--muse-card);
+  border-radius: 24px;
+  border: 1px solid var(--muse-border);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.terms-summary h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--muse-accent);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.terms-grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.terms-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--muse-soft);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.terms-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--muse-accent);
+  background: rgba(192, 162, 125, 0.05);
+}
+
+.terms-item.featured {
+  background: linear-gradient(135deg, var(--muse-soft), rgba(192, 162, 125, 0.08));
+  border-left: 3px solid var(--muse-accent);
+}
+
+.terms-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(192, 162, 125, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.terms-icon i {
+  font-size: 1.2rem;
+  color: var(--muse-accent);
+}
+
+.terms-content {
+  flex: 1;
+}
+
+.terms-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.terms-content p {
+  font-size: 0.8rem;
+  color: var(--muse-copy);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.terms-content small {
+  font-size: 0.7rem;
+  color: var(--muse-accent);
+}
+
+.badge {
+  background: var(--muse-accent);
+  color: #141518;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Policies Grid */
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.policy-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: var(--muse-soft);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.policy-item:hover {
+  background: rgba(192, 162, 125, 0.05);
+}
+
+.policy-item i {
+  font-size: 1rem;
+  color: var(--muse-accent);
+  margin-top: 0.2rem;
+  width: 24px;
+}
+
+.policy-item h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.policy-item p {
+  font-size: 0.7rem;
+  color: var(--muse-copy);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Terms Note */
+.terms-note {
+  background: rgba(192, 162, 125, 0.08);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid var(--muse-border);
+}
+
+.terms-note i {
+  font-size: 1.2rem;
+  color: var(--muse-accent);
+}
+
+.terms-note p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muse-copy);
+}
+
+.terms-note strong {
+  color: var(--muse-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .terms-grid.two-col {
+    grid-template-columns: 1fr;
+  }
+  
+  .policies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .terms-summary {
+    padding: 1.2rem;
+  }
+  
+  .terms-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .terms-icon {
+    margin: 0 auto;
+  }
+  
+  .terms-note {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+  </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -100,19 +317,23 @@
             <li><i class="fas fa-check-circle"></i> Perfect for beginners</li>
           </ul>
           <a href="index.html#schedule" class="btn-package">Book Now</a>
-          
+
           <!-- Terms & Conditions -->
           <div class="terms-toggle">
-            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i class="fas fa-chevron-down"></i></span>
+            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                class="fas fa-chevron-down"></i></span>
             <div class="terms-content">
               <h4>Drop-in Class Terms & Conditions</h4>
               <ul>
                 <li><strong>Validity:</strong> Single class pass valid for 30 days from purchase date.</li>
-                <li><strong>Cancellation:</strong> Cancellations must be made at least 12 hours before class start time to retain credit.</li>
-                <li><strong>No-Show Policy:</strong> Failure to cancel within 12 hours or no-show results in loss of class credit.</li>
+                <li><strong>Cancellation:</strong> Cancellations must be made at least 12 hours before class start time
+                  to retain credit.</li>
+                <li><strong>No-Show Policy:</strong> Failure to cancel within 12 hours or no-show results in loss of
+                  class credit.</li>
                 <li><strong>Expiration:</strong> Unused classes expire after 30 days with no refund or extension.</li>
                 <li><strong>Transferability:</strong> Drop-in passes are non-transferable and non-refundable.</li>
-                <li><strong>First-Time Offer:</strong> First-time clients receive 20% off their first drop-in class.</li>
+                <li><strong>First-Time Offer:</strong> First-time clients receive 20% off their first drop-in class.
+                </li>
               </ul>
             </div>
           </div>
@@ -140,19 +361,23 @@
             <li><i class="fas fa-check-circle"></i> Priority booking window</li>
           </ul>
           <a href="index.html#schedule" class="btn-package">Get Pack</a>
-          
+
           <!-- Terms & Conditions -->
           <div class="terms-toggle">
-            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i class="fas fa-chevron-down"></i></span>
+            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                class="fas fa-chevron-down"></i></span>
             <div class="terms-content">
               <h4>5 Class Pack Terms & Conditions</h4>
               <ul>
                 <li><strong>Validity:</strong> 5-class pack valid for 3 months from purchase date.</li>
-                <li><strong>Cancellation:</strong> 12-hour cancellation policy applies. Late cancellations count as class used.</li>
+                <li><strong>Cancellation:</strong> 12-hour cancellation policy applies. Late cancellations count as
+                  class used.</li>
                 <li><strong>No-Show Policy:</strong> No-shows result in loss of class credit.</li>
-                <li><strong>Expiration:</strong> All unused classes expire after 3 months with no refund or extension.</li>
+                <li><strong>Expiration:</strong> All unused classes expire after 3 months with no refund or extension.
+                </li>
                 <li><strong>Transferability:</strong> Pack can be shared with friends and family members.</li>
-                <li><strong>Refunds:</strong> Class packs are non-refundable but can be transferred to another person.</li>
+                <li><strong>Refunds:</strong> Class packs are non-refundable but can be transferred to another person.
+                </li>
                 <li><strong>Extensions:</strong> Extensions may be granted for medical reasons with doctor's note.</li>
               </ul>
             </div>
@@ -182,17 +407,20 @@
             <li><i class="fas fa-check-circle"></i> Shareable with friends</li>
           </ul>
           <a href="index.html#schedule" class="btn-package featured-btn">Get Best Value</a>
-          
+
           <!-- Terms & Conditions -->
           <div class="terms-toggle">
-            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i class="fas fa-chevron-down"></i></span>
+            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                class="fas fa-chevron-down"></i></span>
             <div class="terms-content">
               <h4>10 Class Pack Terms & Conditions</h4>
               <ul>
                 <li><strong>Validity:</strong> 10-class pack valid for 6 months from purchase date.</li>
-                <li><strong>Cancellation:</strong> 12-hour cancellation policy applies. Late cancellations count as class used.</li>
+                <li><strong>Cancellation:</strong> 12-hour cancellation policy applies. Late cancellations count as
+                  class used.</li>
                 <li><strong>No-Show Policy:</strong> No-shows result in loss of class credit.</li>
-                <li><strong>Expiration:</strong> All unused classes expire after 6 months with no refund or extension.</li>
+                <li><strong>Expiration:</strong> All unused classes expire after 6 months with no refund or extension.
+                </li>
                 <li><strong>Priority Booking:</strong> Pack holders get 48-hour priority booking window.</li>
                 <li><strong>Transferability:</strong> Pack can be shared with up to 3 family members or friends.</li>
                 <li><strong>Refunds:</strong> Class packs are non-refundable but can be transferred.</li>
@@ -231,15 +459,17 @@
             <li><i class="fas fa-check-circle"></i> Perfect for beginners or rehabilitation</li>
           </ul>
           <a href="index.html#schedule" class="btn-private">Book Private</a>
-          
+
           <!-- Terms & Conditions -->
           <div class="terms-toggle private-terms">
-            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i class="fas fa-chevron-down"></i></span>
+            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                class="fas fa-chevron-down"></i></span>
             <div class="terms-content">
               <h4>Private Session Terms & Conditions</h4>
               <ul>
                 <li><strong>Duration:</strong> 60-minute one-on-one session with certified instructor.</li>
-                <li><strong>Cancellation:</strong> 24-hour cancellation notice required to avoid full session charge.</li>
+                <li><strong>Cancellation:</strong> 24-hour cancellation notice required to avoid full session charge.
+                </li>
                 <li><strong>Late Cancellation:</strong> Cancellations within 24 hours incur 50% session fee.</li>
                 <li><strong>No-Show:</strong> No-shows result in full session charge with no rescheduling.</li>
                 <li><strong>Packages:</strong> Purchase 5 private sessions for ₦160,000 (save ₦15,000).</li>
@@ -265,10 +495,11 @@
             <li><i class="fas fa-check-circle"></i> Shared experience, shared cost</li>
           </ul>
           <a href="index.html#schedule" class="btn-private">Book Duet</a>
-          
+
           <!-- Terms & Conditions -->
           <div class="terms-toggle private-terms">
-            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i class="fas fa-chevron-down"></i></span>
+            <span class="terms-link" onclick="toggleTerms(this)">View Terms & Conditions <i
+                class="fas fa-chevron-down"></i></span>
             <div class="terms-content">
               <h4>Duet Session Terms & Conditions</h4>
               <ul>
@@ -369,7 +600,8 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Yes! Our 5-class and 10-class packs are shareable with friends and family. Drop-in passes are non-transferable. When booking, simply specify who will be attending each class.</p>
+            <p>Yes! Our 5-class and 10-class packs are shareable with friends and family. Drop-in passes are
+              non-transferable. When booking, simply specify who will be attending each class.</p>
           </div>
         </div>
 
@@ -379,7 +611,8 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Unused classes expire after the validity period and cannot be refunded. We recommend planning your classes regularly. Extensions may be granted for medical reasons with proper documentation.</p>
+            <p>Unused classes expire after the validity period and cannot be refunded. We recommend planning your
+              classes regularly. Extensions may be granted for medical reasons with proper documentation.</p>
           </div>
         </div>
 
@@ -389,7 +622,8 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>We require 12 hours notice for cancellations. Late cancellations or no-shows will result in the loss of that class credit from your pack. Private sessions require 24-hour notice.</p>
+            <p>We require 12 hours notice for cancellations. Late cancellations or no-shows will result in the loss of
+              that class credit from your pack. Private sessions require 24-hour notice.</p>
           </div>
         </div>
 
@@ -399,7 +633,8 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Yes! You can upgrade at any time by paying the difference in price. The remaining classes from your current pack will be added to your new pack with the extended validity period.</p>
+            <p>Yes! You can upgrade at any time by paying the difference in price. The remaining classes from your
+              current pack will be added to your new pack with the extended validity period.</p>
           </div>
         </div>
 
@@ -409,14 +644,15 @@
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            <p>Class packs are non-refundable but can be transferred to another person. If you have a medical condition preventing participation, we may offer extensions with a doctor's note.</p>
+            <p>Class packs are non-refundable but can be transferred to another person. If you have a medical condition
+              preventing participation, we may offer extensions with a doctor's note.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- Terms & Conditions Section -->
+  <!-- Terms & Conditions Section -->
   <section class="terms-section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -425,292 +661,146 @@
         <p class="section-subtitle">Please read our terms carefully before purchasing</p>
       </div>
 
-      <div class="terms-grid" data-aos="fade-up">
-        <!-- Drop-in Terms -->
-        <div class="terms-card">
-          <div class="terms-card-header">
-            <i class="fas fa-calendar-day"></i>
-            <h3>Drop-in Class</h3>
+      <div class="terms-container" data-aos="fade-up">
+        <!-- Package Terms Summary -->
+        <!-- <div class="terms-summary">
+          <h3>Class Packages & Sessions</h3>
+          <div class="terms-grid">
+            <div class="terms-item">
+              <div class="terms-icon"><i class="fas fa-calendar-day"></i></div>
+              <div class="terms-content">
+                <h4>Drop-in</h4>
+                <p>₦12,000 · Valid 30 days · Non-transferable · 12hr cancellation</p>
+                <small>First-time clients get 20% off</small>
+              </div>
+            </div>
+            <div class="terms-item">
+              <div class="terms-icon"><i class="fas fa-ticket-alt"></i></div>
+              <div class="terms-content">
+                <h4>5 Class Pack</h4>
+                <p>₦55,000 · Valid 3 months · Shareable · 12hr cancellation</p>
+                <small>Save ₦5,000 vs drop-in</small>
+              </div>
+            </div>
+            <div class="terms-item featured">
+              <div class="terms-icon"><i class="fas fa-star"></i></div>
+              <div class="terms-content">
+                <h4>10 Class Pack <span class="badge">Most Popular</span></h4>
+                <p>₦100,000 · Valid 6 months · Shareable (up to 3 people) · Priority booking</p>
+                <small>Free mat rental + 10% off workshops</small>
+              </div>
+            </div>
+            <div class="terms-item">
+              <div class="terms-icon"><i class="fas fa-user"></i></div>
+              <div class="terms-content">
+                <h4>Private Session</h4>
+                <p>₦35,000/session · 60 min · 24hr cancellation · Personalized attention</p>
+                <small>5-pack: ₦160,000 · 10-pack: ₦310,000</small>
+              </div>
+            </div>
+            <div class="terms-item">
+              <div class="terms-icon"><i class="fas fa-user-friends"></i></div>
+              <div class="terms-content">
+                <h4>Duet Session</h4>
+                <p>₦50,000/session · 60 min for two · 24hr cancellation · Both must attend</p>
+                <small>5-pack: ₦230,000 · 10-pack: ₦450,000</small>
+              </div>
+            </div>
           </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Validity & Expiration</h4>
-              <ul>
-                <li>Single class pass valid for <strong>30 days</strong> from date of purchase</li>
-                <li>Unused classes expire after 30 days with <strong>no refund or extension</strong></li>
-                <li>Expiration dates cannot be extended except for medical emergencies with documentation</li>
-              </ul>
+        </div> -->
+
+        <!-- Membership Terms Summary -->
+        <!-- <div class="terms-summary">
+          <h3>Membership Plans</h3>
+          <div class="terms-grid two-col">
+            <div class="terms-item featured">
+              <div class="terms-icon"><i class="fas fa-infinity"></i></div>
+              <div class="terms-content">
+                <h4>Monthly Unlimited <span class="badge">Best Value</span></h4>
+                <p>₦180,000/month · Unlimited classes · 72hr priority booking · Free mat & towel</p>
+                <small>10% off workshops · 1 guest pass/month · Freeze option available</small>
+              </div>
             </div>
-            <div class="terms-group">
-              <h4>Cancellation & No-Show Policy</h4>
-              <ul>
-                <li>Cancellations must be made at least <strong>12 hours</strong> before class start time</li>
-                <li>Late cancellations (within 12 hours) result in <strong>loss of class credit</strong></li>
-                <li>No-shows without any cancellation result in <strong>forfeiture of class credit</strong></li>
-                <li>Emergency cancellations may be reviewed on a case-by-case basis</li>
-              </ul>
+            <div class="terms-item">
+              <div class="terms-icon"><i class="fas fa-calendar-alt"></i></div>
+              <div class="terms-content">
+                <h4>3-Month Commitment</h4>
+                <p>₦165,000/month · Unlimited classes · 48hr booking · 3-month minimum</p>
+                <small>Save ₦15,000/quarter · 1 guest pass/quarter</small>
+              </div>
             </div>
-            <div class="terms-group">
-              <h4>Transferability & Refunds</h4>
-              <ul>
-                <li>Drop-in passes are <strong>non-transferable</strong> and <strong>non-refundable</strong></li>
-                <li>Cannot be shared with friends or family members</li>
-                <li>No refunds for unused or partially used passes</li>
-              </ul>
+          </div>
+        </div> -->
+
+        <!-- General Policies -->
+        <div class="terms-summary">
+          <h3>General Policies</h3>
+          <div class="policies-grid">
+            <div class="policy-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Cancellation Policy</h4>
+                <p>12-hour notice for group classes · 24-hour notice for private/duet sessions</p>
+              </div>
             </div>
-            <div class="terms-group">
-              <h4>First-Time Client Offer</h4>
-              <ul>
-                <li>First-time clients receive <strong>20% off</strong> their first drop-in class</li>
-                <li>Offer valid for new clients only, one-time use</li>
-                <li>Must present valid ID at first visit</li>
-              </ul>
+            <div class="policy-item">
+              <i class="fas fa-exchange-alt"></i>
+              <div>
+                <h4>Refunds & Transfers</h4>
+                <p>All packages are non-refundable. Class packs are transferable; memberships are not.</p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-hourglass-half"></i>
+              <div>
+                <h4>Expiration</h4>
+                <p>Drop-in: 30 days · 5-pack: 3 months · 10-pack: 6 months · No extensions except medical</p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-user-check"></i>
+              <div>
+                <h4>Attendance</h4>
+                <p>Arrive 5-10 mins early · Late arrivals >5 mins may not be admitted · No-shows forfeit class credit
+                </p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-child"></i>
+              <div>
+                <h4>Age Requirement</h4>
+                <p>Minimum 14 years · Ages 14-16 must be accompanied by a participating adult</p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-tshirt"></i>
+              <div>
+                <h4>Dress Code</h4>
+                <p>Fitted athletic wear · Grippy socks required for reformer classes</p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-notes-medical"></i>
+              <div>
+                <h4>Health & Safety</h4>
+                <p>Complete health questionnaire before first class · Inform instructor of injuries or pregnancy</p>
+              </div>
+            </div>
+            <div class="policy-item">
+              <i class="fas fa-file-signature"></i>
+              <div>
+                <h4>Liability Waiver</h4>
+                <p>All participants must sign a waiver before attending first class</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 5 Class Pack Terms -->
-        <div class="terms-card">
-          <div class="terms-card-header">
-            <i class="fas fa-ticket-alt"></i>
-            <h3>5 Class Pack</h3>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Validity & Expiration</h4>
-              <ul>
-                <li>5-class pack valid for <strong>3 months (90 days)</strong> from purchase date</li>
-                <li>All unused classes expire after 3 months with <strong>no refund or extension</strong></li>
-                <li>One-time 30-day extension available with written request and valid reason</li>
-                <li>Medical extensions require doctor's note for approval</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Cancellation & No-Show Policy</h4>
-              <ul>
-                <li><strong>12-hour cancellation policy</strong> applies to all classes</li>
-                <li>Late cancellations (within 12 hours) count as <strong>one class used</strong></li>
-                <li>No-shows result in <strong>automatic loss of class credit</strong></li>
-                <li>Three late cancellations within 30 days may result in temporary booking restrictions</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Transferability</h4>
-              <ul>
-                <li>Pack can be <strong>shared with friends and family members</strong></li>
-                <li>Multiple people can use the same pack for different classes</li>
-                <li>Each person attending must sign a waiver before their first class</li>
-                <li>Cannot be transferred to another person's account after purchase</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Refund Policy</h4>
-              <ul>
-                <li>Class packs are <strong>non-refundable</strong> after purchase</li>
-                <li>Can be transferred to another person with written authorization</li>
-                <li>Refunds only considered for medical reasons with doctor's documentation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10 Class Pack Terms -->
-        <div class="terms-card featured-terms">
-          <div class="terms-card-header">
-            <i class="fas fa-star"></i>
-            <h3>10 Class Pack</h3>
-            <span class="terms-badge">MOST POPULAR</span>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Validity & Expiration</h4>
-              <ul>
-                <li>10-class pack valid for <strong>6 months (180 days)</strong> from purchase date</li>
-                <li>All unused classes expire after 6 months with <strong>no refund or extension</strong></li>
-                <li>One-time 60-day extension available with written request and valid reason</li>
-                <li>Medical extensions up to 90 days with doctor's note</li>
-                <li>Expiration reminders sent via email at 30, 14, and 7 days before expiry</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Cancellation & No-Show Policy</h4>
-              <ul>
-                <li><strong>12-hour cancellation policy</strong> applies to all classes</li>
-                <li>Late cancellations (within 12 hours) count as <strong>one class used</strong></li>
-                <li>No-shows result in <strong>automatic loss of class credit</strong></li>
-                <li>Priority booking allows reservations <strong>48 hours in advance</strong></li>
-                <li>Freeze option available for up to 30 days with 7-day notice</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Transferability & Sharing</h4>
-              <ul>
-                <li>Pack can be <strong>shared with up to 3 family members or friends</strong></li>
-                <li>Each person must create a profile and sign waiver before attending</li>
-                <li>Pack holder is responsible for managing shared bookings</li>
-                <li>Cannot be split into individual accounts after purchase</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Bonus Benefits</h4>
-              <ul>
-                <li><strong>Free mat rental</strong> for all classes in this pack</li>
-                <li><strong>Priority booking window</strong> - book 48 hours in advance</li>
-                <li><strong>10% off workshops</strong> and special events</li>
-                <li><strong>Complimentary towel service</strong> included</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Refund & Upgrade Policy</h4>
-              <ul>
-                <li>Class packs are <strong>non-refundable</strong> after purchase</li>
-                <li>Can upgrade to larger pack by paying the difference</li>
-                <li>Upgrade extends validity period to match new pack</li>
-                <li>Refunds only considered for medical reasons with proper documentation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Private Session Terms -->
-        <div class="terms-card">
-          <div class="terms-card-header">
-            <i class="fas fa-user"></i>
-            <h3>Private Session</h3>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Duration & Scheduling</h4>
-              <ul>
-                <li><strong>60-minute</strong> one-on-one session with certified instructor</li>
-                <li>Sessions subject to <strong>instructor availability</strong></li>
-                <li>Scheduling available up to <strong>14 days in advance</strong></li>
-                <li>Same-day bookings available based on instructor availability</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Cancellation Policy</h4>
-              <ul>
-                <li><strong>24-hour cancellation notice</strong> required to avoid full session charge</li>
-                <li>Cancellations within 24 hours incur <strong>50% session fee</strong></li>
-                <li>No-shows result in <strong>full session charge</strong> with no rescheduling</li>
-                <li>Emergency cancellations may be reviewed with documentation</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Packages & Discounts</h4>
-              <ul>
-                <li>Purchase <strong>5 private sessions for ₦160,000</strong> (save ₦15,000)</li>
-                <li>Purchase <strong>10 private sessions for ₦310,000</strong> (save ₦40,000)</li>
-                <li>Package sessions valid for <strong>6 months</strong> from purchase</li>
-                <li>Single sessions valid for <strong>30 days</strong></li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Refund & Transfer Policy</h4>
-              <ul>
-                <li>Single private sessions are <strong>non-refundable</strong></li>
-                <li>Private session packages are <strong>non-refundable</strong> but transferable</li>
-                <li>Sessions can be transferred to another person with written authorization</li>
-                <li>Refunds only for medical reasons with doctor's documentation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Duet Session Terms -->
-        <div class="terms-card">
-          <div class="terms-card-header">
-            <i class="fas fa-user-friends"></i>
-            <h3>Duet Session</h3>
-          </div>
-          <div class="terms-card-content">
-            <div class="terms-group">
-              <h4>Duration & Scheduling</h4>
-              <ul>
-                <li><strong>60-minute</strong> semi-private session for <strong>two participants</strong></li>
-                <li>Both participants must be present for session to proceed</li>
-                <li>Scheduling requires <strong>both participants to agree on time</strong></li>
-                <li>Sessions subject to instructor availability</li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Cancellation Policy</h4>
-              <ul>
-                <li><strong>24-hour cancellation notice</strong> required from <strong>both participants</strong></li>
-                <li>If one participant cancels within 24 hours, session still proceeds with one person at full price</li>
-                <li>If both cancel within 24 hours, <strong>50% session fee applies</strong></li>
-                <li>No-shows from either participant result in <strong>full session charge</strong></li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Packages & Discounts</h4>
-              <ul>
-                <li>Purchase <strong>5 duet sessions for ₦230,000</strong> (save ₦20,000)</li>
-                <li>Purchase <strong>10 duet sessions for ₦450,000</strong> (save ₦50,000)</li>
-                <li>Package sessions valid for <strong>6 months</strong> from purchase</li>
-                <li>Single sessions valid for <strong>30 days</strong></li>
-              </ul>
-            </div>
-            <div class="terms-group">
-              <h4>Partner Requirements</h4>
-              <ul>
-                <li>Both participants must be <strong>similar fitness levels</strong> for optimal experience</li>
-                <li>Instructor reserves right to modify session based on participant levels</li>
-                <li>Different partners can be used for different sessions in a pack</li>
-                <li>All participants must sign waiver before first session</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- General Terms -->
-      <div class="general-terms" data-aos="fade-up">
-        <h3>General Terms & Conditions</h3>
-        <div class="general-terms-grid">
-          <div class="general-term-item">
-            <i class="fas fa-shield-alt"></i>
-            <div>
-              <h4>Health & Safety</h4>
-              <p>All participants must complete a health questionnaire before first class. Please inform instructor of any injuries, medical conditions, or pregnancy before class.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-clock"></i>
-            <div>
-              <h4>Arrival Time</h4>
-              <p>Please arrive 5-10 minutes before class. Late arrivals beyond 5 minutes may not be admitted to ensure class safety and flow.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-child"></i>
-            <div>
-              <h4>Age Requirements</h4>
-              <p>Minimum age 14 years for group classes. Ages 14-16 must be accompanied by a participating adult. No childcare services available.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-tshirt"></i>
-            <div>
-              <h4>Dress Code</h4>
-              <p>Wear comfortable, fitted athletic wear. Grippy socks required for reformer classes. Barefoot allowed for mat classes.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <h4>Contact</h4>
-              <p>For questions or assistance, email hello@mmpilates.com or call (02) 8123 4567. Response within 24 business hours.</p>
-            </div>
-          </div>
-          <div class="general-term-item">
-            <i class="fas fa-gavel"></i>
-            <div>
-              <h4>Liability Waiver</h4>
-              <p>All participants must sign a liability waiver before attending their first class. Waivers available online and in-studio.</p>
-            </div>
-          </div>
+        <!-- Quick Reference Note -->
+        <div class="terms-note">
+          <i class="fas fa-info-circle"></i>
+          <p>For questions about these terms, contact us at <strong>hello@mmpilates.com</strong> or call <strong>(02)
+              8123 4567</strong></p>
         </div>
       </div>
     </div>
@@ -846,7 +936,7 @@
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
         const target = document.querySelector(href);
@@ -858,4 +948,5 @@
     });
   </script>
 </body>
+
 </html>
