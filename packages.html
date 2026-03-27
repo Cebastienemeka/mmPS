@@ -239,6 +239,44 @@
     text-align: center;
   }
 }
+
+/* ------------------------------
+   ACTIVE PRICING DROPDOWN STYLES
+------------------------------ */
+
+/* Active state for dropdown toggle (Pricing link) - Turns gold when any pricing page is active */
+.navbar .nav-link.dropdown-toggle.active {
+  color: #c0a27d;
+}
+
+.navbar .nav-link.dropdown-toggle.active::after {
+  transform: scaleX(1);
+}
+
+/* Ensure the dropdown toggle shows gold when dropdown is open */
+.navbar .nav-link.dropdown-toggle.show {
+  color: #c0a27d;
+}
+
+/* Active dropdown item styling - Gold color, no black background */
+.dropdown-menu-dark .dropdown-item.active {
+  background: transparent;
+  color: #c0a27d;
+  position: relative;
+}
+
+/* Underline effect for active dropdown items */
+.dropdown-menu-dark .dropdown-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #c0a27d;
+  transform: scaleX(1);
+}
   </style>
 </head>
 
@@ -259,14 +297,14 @@
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#classes">Classes</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-              Pricing
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item active" href="packages.html">Packages</a></li>
-              <li><a class="dropdown-item" href="membership.html">Membership</a></li>
-            </ul>
-          </li>
+  <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+    Pricing
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="packages.html">Packages</a></li>
+    <li><a class="dropdown-item" href="membership.html">Membership</a></li>
+  </ul>
+</li>
           <li class="nav-item"><a class="nav-link" href="index.html#schedule">Schedule</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
@@ -799,8 +837,11 @@
         <!-- Quick Reference Note -->
         <div class="terms-note">
           <i class="fas fa-info-circle"></i>
-          <p>For questions about these terms, contact us at <strong>hello@mmpilates.com</strong> or call <strong>(02)
-              8123 4567</strong></p>
+          <p>For questions about these terms, contact us at 
+  <strong><a href="mailto:hello@mmpilates.com" style="color: #c0a27d; text-decoration: none;">hello@mmpilates.com</a></strong> 
+  or call 
+  <strong><a href="tel:+2348123456789" style="color: #c0a27d; text-decoration: none;">(02) 8123 4567</a></strong>
+</p>
         </div>
       </div>
     </div>

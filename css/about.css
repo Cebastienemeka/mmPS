@@ -820,6 +820,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------
+   ACTIVE NAV LINK STYLES - MATCHES MAIN SITE
+------------------------------ */
+
+/* Active nav link styling - gold color with underline */
+.navbar .nav-link.active {
+  color: #c0a27d !important;
+}
+
+.navbar .nav-link.active::after {
+  transform: scaleX(1) !important;
+}
+
+/* Ensure the active dropdown styling matches */
+.navbar .nav-link.dropdown-toggle.active {
+  color: #c0a27d !important;
+}
+
+.navbar .nav-link.dropdown-toggle.active::after {
+  transform: scaleX(1) !important;
+}
+
+/* ------------------------------
    RESPONSIVE
 ------------------------------ */
 @media (max-width: 1199.98px) {

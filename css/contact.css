@@ -764,6 +764,182 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------
+   ACTIVE NAV LINK STYLES - GOLD COLOR
+------------------------------ */
+
+/* Active nav link styling - gold color with underline */
+.navbar .nav-link.active {
+  color: #c0a27d !important;
+}
+
+.navbar .nav-link.active::after {
+  transform: scaleX(1) !important;
+}
+
+/* Ensure active dropdown styling matches */
+.navbar .nav-link.dropdown-toggle.active {
+  color: #c0a27d !important;
+}
+
+.navbar .nav-link.dropdown-toggle.active::after {
+  transform: scaleX(1) !important;
+}
+
+/* Hover state for nav links - gold underline */
+.navbar .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .nav-link:hover {
+  color: #c0a27d !important;
+}
+
+/* ============= */
+
+/* Studio Hours - Each on separate line, no breaking */
+.hours-list {
+  margin: 0;
+}
+
+.hours-list div {
+  color: var(--muse-copy);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+/* Map Container - Full Height Map */
+.map-container {
+  background: var(--muse-card);
+  border-radius: 24px;
+  border: 1px solid var(--muse-border);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 550px;
+}
+
+.map-container:hover {
+  transform: translateY(-5px);
+  border-color: var(--muse-accent);
+  box-shadow: var(--muse-shadow);
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--muse-soft);
+  border-bottom: 1px solid var(--muse-border);
+  flex-shrink: 0;
+}
+
+.map-header-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(192, 162, 125, 0.12);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-header-icon i {
+  font-size: 1.5rem;
+  color: var(--muse-accent);
+}
+
+.map-header-text h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--muse-ink);
+}
+
+.map-header-text p {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muse-copy);
+}
+
+.map-wrapper {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.2) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.map-container:hover .map-wrapper iframe {
+  filter: grayscale(0) brightness(1);
+}
+
+.map-footer {
+  padding: 1rem 1.5rem;
+  background: var(--muse-soft);
+  border-top: 1px solid var(--muse-border);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.map-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muse-accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.map-directions:hover {
+  color: var(--muse-accent-deep);
+  gap: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .map-container {
+    min-height: 450px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    min-height: 400px;
+  }
+  
+  .map-header {
+    padding: 1rem;
+  }
+  
+  .map-header-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .map-header-icon i {
+    font-size: 1.2rem;
+  }
+  
+  .map-header-text h4 {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------------------
    RESPONSIVE
 ------------------------------ */
 @media (max-width: 1199.98px) {
